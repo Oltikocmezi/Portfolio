@@ -20,13 +20,13 @@ const MenuItems = [
   {
     title: "Contact",
     icon: <TbHeartHandshake />,
-    url: "/",
+    url: "#Projects",
     cName: "links",
   },
   {
     title: "Contact",
     icon: <GrContact />,
-    url: "/",
+    url: "#Contact",
     cName: "links",
   },
 ];
@@ -43,23 +43,24 @@ function NavBar() {
         <ul className=" flex justify-around w-full items-center">
           {MenuItems.map((item, index) => {
             return (
-              <li
-                key={index}
-                style={{
-                  backgroundColor:
-                    activeIndex === index ? "black" : "transparent",
-                }}
-                className={`text-white cursor-pointer hover:bg-black p-4 rounded-full duration-500 text-xl
+              <a href={item.url}>
+                <li
+                  key={index}
+                  style={{
+                    backgroundColor:
+                      activeIndex === index ? "black" : "transparent",
+                  }}
+                  className={`text-white cursor-pointer hover:bg-black p-4 rounded-full duration-500 text-xl
                   ${
                     activeIndex === index
                       ? "bg-black"
                       : "hover:bg-black hover:text-white"
                   }`}
-                href={item.url}
-                onClick={() => handleClick(index)}
-              >
-                {item.icon}
-              </li>
+                  onClick={() => handleClick(index)}
+                >
+                  {item.icon}
+                </li>
+              </a>
             );
           })}
         </ul>

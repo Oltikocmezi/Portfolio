@@ -1,23 +1,18 @@
 import React from "react";
-import NavBar from "../components/NavBar";
-import headerbg from "../assets/cool-background.png";
+import "../App.css";
 import profile from "../assets/Profile.png";
 import Socials from "../components/Socials";
 // w-full h-screen inset-0 backdrop-blur-2xl
-function Header(props) {
-  const Id = props;
+function Header() {
   return (
-    <div id={Id} className="min-w-80 w-full h-screen bg-red-500 min-h-screen">
-      <div
-        className="App-header bg-cover bg-center bg-no-repeat text-white"
-        style={{ backgroundImage: `url(${headerbg})` }}
-      >
+    <div id="Home" className="min-w-80 w-full h-screen min-h-screen ">
+      <div className="App-header flex justify-center items-center bg-cover bg-center bg-no-repeat text-white ">
         <section className=" flex flex-col justify-start items-center w-fit h-screen">
-          <div className=" p-4 mt-24">
+          <div className=" p-4 mt-24 flex flex-col justify-center items-center">
             <p className="text-md sm:text-lg font-sans font-medium cursor-default">
               Hello, I'm
             </p>
-            <h1 className="text-4xl sm:text-6xl font-sans font-medium cursor-default">
+            <h1 className="name text-4xl sm:text-6xl font-sans font-medium cursor-default">
               Olt Koçmezi
             </h1>
             <p className="text-gray-300 text-md sm:text-lg font-sans font-medium mt-4 cursor-default">
@@ -26,16 +21,23 @@ function Header(props) {
           </div>
 
           <div className="flex mt-8 justify-around items-center">
-            <button className="border hover:border-green-800 border-green-400 hover:bg-green-800 duration-500 px-3 py-3 sm:px-6 sm:py-4 text-green-400 text-lg sm:text-xl font-sans font-medium rounded-lg">
+            <a
+              href="/Olt Kocmezi CV (Resume).pdf"
+              download="Olt_Kocmezi_CV.pdf"
+              className="border hover:border-blue-900 border-blue-400 hover:bg-blue-900 duration-500 px-3 py-3 sm:px-6 sm:py-4 text-blue-400 text-lg sm:text-xl font-sans font-medium rounded-lg"
+            >
               Download CV
-            </button>
-            <button className="ml-10 bg-green-700 hover:bg-green-800 duration-500 px-3 py-3 sm:px-6 sm:py-4 text-white text-lg sm:text-xl font-sans rounded-lg">
+            </a>
+            <a
+              href="#Contact"
+              className="ml-10 bg-blue-800 hover:bg-blue-900 duration-500 px-3 py-3 sm:px-6 sm:py-4 text-white text-lg sm:text-xl font-sans rounded-lg"
+            >
               Let's Talk
-            </button>
+            </a>
           </div>
         </section>
 
-        <div className=" min-w-fit absolute bottom-0 sm:bottom-6 bg-transparent/10 sm:w-96 sm:h-96 rounded-t-full">
+        <div className=" min-w-fit absolute bottom-0 sm:bottom-6 bg-transparent/20 sm:w-96 sm:h-96 rounded-t-full">
           <img
             src={profile}
             alt="img"
@@ -44,7 +46,6 @@ function Header(props) {
         </div>
 
         <Socials />
-        <NavBar />
       </div>
     </div>
   );

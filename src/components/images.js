@@ -1,5 +1,5 @@
-import image1 from "../assets/TreasureYacht-img.png";
-import image2 from "../assets/pic2.jpg";
+import image1 from "../assets/TreasureYachPagesImg.png";
+import image2 from "../assets/InsightlinkPagesImg.png";
 import image3 from "../assets/pic3.jpg";
 
 const images = [

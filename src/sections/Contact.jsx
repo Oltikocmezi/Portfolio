@@ -6,13 +6,13 @@ import { FaLinkedin } from "react-icons/fa";
 const info = [
   {
     url: "mailto:oltikocmezii@gmail.com",
-    img: <IoIosMail className="text-blue-400 text-3xl" />,
+    img: <IoIosMail className="text-blue-400 text-2xl md:text-3xl" />,
     title: "Email",
     subtitle: "Oltikocmezii@gmail.com",
   },
   {
     url: "https://www.linkedin.com/in/olt-ko%C3%A7mezi-3381a8249/",
-    img: <FaLinkedin className="text-blue-400 text-3xl" />,
+    img: <FaLinkedin className="text-blue-400 text-2xl md:text-3xl" />,
     title: "Linkedin",
     subtitle: "Oltikocmezi",
   },
@@ -63,21 +63,21 @@ function Contact() {
           onSubmit={sendEmail}
         >
           <input
-            className="bg-transparent border border-blue-300 rounded-lg pl-4 w-1/3 py-4 text-left"
+            className="bg-transparent border border-blue-300 rounded-lg pl-4 w-72 md:w-1/3 py-4 text-left"
             type="text"
             name="name"
             placeholder="Your Full Name"
             required
           />
           <input
-            className="bg-transparent border border-blue-300 rounded-lg pl-4 w-1/3 py-4 text-left"
+            className="bg-transparent border border-blue-300 rounded-lg pl-4 w-72 md:w-1/3 py-4 text-left"
             type="email"
             name="email"
             placeholder="Your Email"
             required
           />
           <textarea
-            className="bg-transparent border border-blue-300 rounded-lg pl-4 w-1/3 py-4 text-left"
+            className="bg-transparent border border-blue-300 rounded-lg pl-4 w-72 md:w-1/3 py-4 text-left"
             name="message"
             rows={7}
             placeholder="Your Message"
@@ -91,16 +91,16 @@ function Contact() {
           </button>
         </form>
       </div>
-      <div className="flex justify-center w-full h-[40vh]">
+      <div className="flex flex-wrap justify-center w-full h-[60vh] md:h-[40vh]">
         {info.map((item, index) => {
           return (
             <a key={index} href={item.url} className="px-6">
-              <div className="w-64 h-52 border border-blue-700/20 bg-blue-700/20 backdrop-blur-sm hover:border-blue-700 cursor-pointer hover:backdrop-blur-none hover:bg-transparent hover:duration-500 rounded-xl flex flex-col justify-center items-center">
+              <div className="w-48 h-48 md:w-64 md:h-52 border border-blue-700/20 bg-blue-700/20 backdrop-blur-sm hover:border-blue-700 cursor-pointer hover:backdrop-blur-none hover:bg-transparent hover:duration-500 rounded-xl flex flex-col justify-center items-center">
                 {item.img}
-                <p className="font-sans text-white font-medium text-2xl mt-4">
+                <p className="font-sans text-white font-medium md:text-2xl mt-4">
                   {item.title}
                 </p>
-                <p className="font-sans text-gray-200 text-md mt-4">
+                <p className="font-sans text-gray-200 md:text-md mt-4">
                   {item.subtitle}
                 </p>
               </div>

@@ -39,7 +39,7 @@ function NavBar() {
   };
   return (
     <div className="min-w-80 fixed bottom-0 left-1/2 transform -translate-x-1/2 sm:bottom-6 sm:w-full flex justify-center items-center">
-      <nav className="nav bg-transparent/10 sm:w-3/6 md:w-2/6 h-16 sm:h-20 flex items-center justify-center rounded-full inset-0 backdrop-blur-2xl">
+      <nav className="nav bg-transparent/10 w-72 sm:w-3/6 md:w-2/6 h-16 sm:h-20 flex items-center justify-center rounded-full inset-0 backdrop-blur-2xl">
         <ul className=" flex justify-around w-full items-center">
           {MenuItems.map((item, index) => {
             return (
